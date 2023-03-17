@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 %main-display {
   display: flex;
   justify-content: center;
