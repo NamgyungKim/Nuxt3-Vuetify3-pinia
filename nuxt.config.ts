@@ -23,9 +23,11 @@ export default defineNuxtConfig({
 	modules: [
 		'@pinia/nuxt',
 	],
-
-	// tailwind, mdi 적용
+	build: {
+		transpile: ['vuetify'],
+	},
 	css: [
+		'vuetify/lib/styles/main.sass',
 		'mdi/css/materialdesignicons.min.css',
 		'~/assets/css/style.css',
 	],
