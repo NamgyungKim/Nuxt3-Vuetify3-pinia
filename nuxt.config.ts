@@ -33,14 +33,16 @@ export default defineNuxtConfig({
 	],
 	vite: {
 		define: {
-			'process.env.DEBUG': false,
+			'process.env.DEBUG': false
 		},
 		// plugins: [eslintPlugin()],
 	},
 
 	// plugins
 	plugins: [
-
+		{
+			src:'~/plugins/v-calendar', mode: 'client'
+		}
 	],
 
 	runtimeConfig: {
