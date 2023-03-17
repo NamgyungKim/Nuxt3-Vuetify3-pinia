@@ -5,16 +5,15 @@ import * as directives from 'vuetify/directives';
 import { VDataTable } from 'vuetify/labs/VDataTable';
 
 export default defineNuxtPlugin((nuxtApp) => {
+  const vuetify = createVuetify({
+    components: {
+      ...components,
+      VDataTable,
+    },
+    directives,
+    theme: {},
+    ssr: true,
+  });
 
-    const vuetify = createVuetify({
-        components: {
-            ...components,
-            VDataTable,
-        },
-        directives,
-        theme: {
-        },
-    });
-
-    nuxtApp.vueApp.use(vuetify);
+  nuxtApp.vueApp.use(vuetify);
 });
