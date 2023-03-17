@@ -1,15 +1,9 @@
 <template>
-	<div>
-		<NavigationBarAbove/>
-	</div>
+  <div>
+    <NavigationBarAbove />
+  </div>
 </template>
 
-<script>
-export default {
-	name: 'header',
-};
-</script>
+<script></script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
