@@ -8,48 +8,44 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config\
 
 export default defineNuxtConfig({
-	// Global Head
-	app: {
-		head: {
-			charset: 'utf-8',
-			// viewport: 'width=500, initial-scale=1',
-			title: 'Nuxt3 프레임워크',
-			meta: [
-				{ name: 'Nuxt3, Pinia, TypeScript 로 구성된 프레임워크', content: '개발을 위한 기본 프레임워크'}
-			]
-		}
-	},
-	// modules
-	modules: [
-		'@pinia/nuxt',
-	],
-	build: {
-		transpile: ['vuetify'],
-	},
-	css: [
-		'vuetify/lib/styles/main.sass',
-		'mdi/css/materialdesignicons.min.css',
-		'~/assets/css/style.css',
-	],
-	vite: {
-		define: {
-			'process.env.DEBUG': false
-		},
-		// plugins: [eslintPlugin()],
-	},
+  // Global Head
+  app: {
+    head: {
+      charset: 'utf-8',
+      // viewport: 'width=500, initial-scale=1',
+      title: 'Nuxt3 프레임워크',
+      meta: [{ name: 'Nuxt3, Pinia, TypeScript 로 구성된 프레임워크', content: '개발을 위한 기본 프레임워크' }],
+    },
+  },
+  // modules
+  modules: ['@pinia/nuxt'],
+  build: {
+    transpile: ['vuetify'],
+    parallel: true,
+    cache: true,
+    hardSource: true,
+  },
+  css: ['vuetify/lib/styles/main.sass', 'mdi/css/materialdesignicons.min.css', '~/assets/css/style.css'],
+  vite: {
+    define: {
+      'process.env.DEBUG': false,
+    },
+    // plugins: [eslintPlugin()],
+  },
 
-	// plugins
-	plugins: [
-		{
-			src:'~/plugins/v-calendar', mode: 'client'
-		}
-	],
+  // plugins
+  plugins: [
+    {
+      src: '~/plugins/v-calendar',
+      mode: 'client',
+    },
+  ],
 
-	runtimeConfig: {
-		public: {
-			currentEnv: process.env.NUXT_CURRENT_ENV,
-			apiBaseUrl: process.env.NUXT_PUBLIC_BASE_URL,
-		},
-	},
-	// ssr: true,
+  runtimeConfig: {
+    public: {
+      currentEnv: process.env.NUXT_CURRENT_ENV,
+      apiBaseUrl: process.env.NUXT_PUBLIC_BASE_URL,
+    },
+  },
+  // ssr: true,
 });
