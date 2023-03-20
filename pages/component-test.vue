@@ -11,6 +11,10 @@
 <script setup>
 import { Calendar } from 'v-calendar';
 
+definePageMeta({
+  middleware: ['authenticated'],
+});
+
 const attributes = ref([
   {
     highlight: true,
