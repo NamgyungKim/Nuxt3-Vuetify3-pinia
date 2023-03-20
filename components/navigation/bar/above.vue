@@ -1,10 +1,10 @@
 <template>
   <div id="aboveNav">
     <nav>
-      <NuxtLink v-if="$route.path !== '/login'" to="/login">Go To Login</NuxtLink>
-      <NuxtLink v-if="$route.path !== '/login/joinUs'" to="/login/joinUs">Go To JoinUs</NuxtLink>
-      <NuxtLink v-if="$route.path !== '/'" to="/">Go To Index</NuxtLink>
-      <NuxtLink v-if="$route.path !== '/about'" to="/about">Go To About</NuxtLink>
+      <NuxtLink to="/">Index</NuxtLink>
+      <NuxtLink to="/api-test">API Test</NuxtLink>
+      <NuxtLink to="/life-cycle">Life Cycle</NuxtLink>
+      <NuxtLink to="/component-test">Component Test</NuxtLink>
     </nav>
   </div>
 </template>

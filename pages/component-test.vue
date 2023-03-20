@@ -2,9 +2,9 @@
   <div>
     <h1>about</h1>
     <v-text-field label="Label"></v-text-field>
-    <!--    <ClientOnly>-->
-    <Calendar locale="ko" :attributes="attributes" />
-    <!--    </ClientOnly>-->
+    <ClientOnly>
+      <Calendar locale="ko" :attributes="attributes" />
+    </ClientOnly>
   </div>
 </template>
 
