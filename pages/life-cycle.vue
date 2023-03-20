@@ -54,6 +54,17 @@ onMounted(() => {
 onUpdated(() => {
   console.log('updated');
 });
+
+onUnmounted(() => {
+  console.log('unmounted');
+});
+
+onErrorCaptured(({ err, instance, info }) => {
+  console.error('onErrorCaptured');
+  console.error(err);
+  console.error(instance);
+  console.error(info);
+});
 </script>
 
 <style scoped></style>
