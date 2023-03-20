@@ -41,6 +41,8 @@
 import { onMounted } from '#imports';
 import { useCmmncdStore } from '~/stores/cmmncd';
 import { DatePicker } from 'v-calendar';
+const route = useRoute();
+const router = useRouter();
 
 let disabledDate = new Date();
 disabledDate.setDate(disabledDate.getDate() + 1);
@@ -86,6 +88,24 @@ async function getStoreCmmncdInfo() {
   formData.set('size', 10);
   cmmncd.fetchCmmncdInfo(formData);
 }
+
+if (route.query.hasOwnProperty('page')) {
+  page.value = Number(route.query.page);
+} else {
+  router.push({ query: { page: 1 } });
+}
+
+watch(route, () => {
+  if (route.query.hasOwnProperty('page')) {
+    page.value = Number(route.query.page);
+  } else {
+    router.push({ query: { page: 1 } });
+  }
+});
+
+watch(page, () => {
+  router.push({ query: { page: page.value } });
+});
 
 getStoreCmmncdInfo();
 
