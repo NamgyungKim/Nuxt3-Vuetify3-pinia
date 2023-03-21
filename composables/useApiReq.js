@@ -1,4 +1,3 @@
-import { SearchParams } from 'ohmyfetch';
 import { useFetch, useRuntimeConfig } from '#app';
 
 export const runtimeConfig = () => {
@@ -33,14 +32,7 @@ export const runtimeConfig = () => {
 	}));
 } */
 
-export default async <T>(
-  apiUrl: string,
-  opts?: {
-    method: string;
-    params?: SearchParams | undefined;
-    body?: BodyInit | Record<string, any> | null | undefined;
-  },
-) => {
+export default async (apiUrl, opts) => {
   return useFetch(apiUrl, {
     baseURL: await runtimeConfig().apiBaseUrl,
     method: opts?.method,
