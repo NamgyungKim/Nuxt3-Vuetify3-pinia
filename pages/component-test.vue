@@ -5,11 +5,17 @@
     <ClientOnly>
       <Calendar locale="ko" :attributes="attributes" />
     </ClientOnly>
+    <v-text-field v-model="cryptoText" label="crypto" />
+    <v-btn @click="fn_getCrypto">getCrypto</v-btn>
+    <v-btn @click="fn_deCrypto">deCrypto</v-btn>
   </div>
 </template>
 
 <script setup>
 import { Calendar } from 'v-calendar';
+import { deCrypto, getCrypto } from '~/utils/crypto';
+
+const cryptoText = ref('');
 
 definePageMeta({
   middleware: ['authenticated'],
@@ -27,6 +33,13 @@ const attributes = ref([
     },
   },
 ]);
+
+const fn_getCrypto = () => {
+  console.log(getCrypto(cryptoText.value));
+};
+const fn_deCrypto = () => {
+  console.log(deCrypto(cryptoText.value));
+};
 </script>
 
 <style scoped></style>

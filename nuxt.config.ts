@@ -74,6 +74,7 @@ export default defineNuxtConfig({
     public: {
       currentEnv: process.env.NUXT_CURRENT_ENV,
       apiBaseUrl: process.env.NUXT_PUBLIC_BASE_URL,
+      cryptoKey: process.env.NUXT_APP_KEY,
     },
   },
   // ssr: true,
