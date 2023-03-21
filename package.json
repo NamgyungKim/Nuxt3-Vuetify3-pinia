@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@pinia/nuxt": "^0.4.3",
+    "@types/node": "^18.15.5",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-loader": "^4.0.2",
@@ -26,11 +27,12 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^9.9.0",
-    "nuxt": "npm:nuxt3@3.0.0-rc.13-27772354.a0a59e2",
+    "nuxt": "3.3.1",
     "nuxt-vite": "^0.3.5",
     "prettier": "^2.8.4"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "8.0.0-beta.10",
     "@popperjs/core": "^2.11.6",
     "autoprefixer": "^10.4.13",
     "mdi": "^2.2.43",

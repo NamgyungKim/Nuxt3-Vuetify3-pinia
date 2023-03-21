@@ -18,14 +18,17 @@ export default defineNuxtConfig({
     },
   },
   // modules
-  modules: ['@pinia/nuxt'],
+  modules: ['@pinia/nuxt', '@nuxtjs/i18n'],
+
   build: {
     transpile: ['vuetify'],
     parallel: true,
     cache: true,
     hardSource: true,
   },
+
   css: ['vuetify/lib/styles/main.sass', 'mdi/css/materialdesignicons.min.css', '~/assets/css/style.css'],
+
   vite: {
     define: {
       'process.env.DEBUG': false,
@@ -40,6 +43,32 @@ export default defineNuxtConfig({
       mode: 'client',
     },
   ],
+
+  i18n: {
+    locales: [
+      {
+        code: 'ko',
+        file: 'ko.js',
+        iso: 'ko-KR',
+      },
+      { code: 'en', file: 'en.js', iso: 'en-US' },
+    ],
+    defaultLocale: 'ko',
+    lazy: true,
+    langDir: 'locales/',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root', // recommended
+    },
+    vueI18n: {
+      legacy: false,
+      locale: 'ko',
+      fallbackLocale: 'ko',
+      availableLocales: ['en', 'ko'],
+    },
+  },
 
   runtimeConfig: {
     public: {

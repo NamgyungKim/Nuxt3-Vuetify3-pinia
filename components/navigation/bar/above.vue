@@ -5,6 +5,7 @@
       <NuxtLink to="/api-test">API Test</NuxtLink>
       <NuxtLink to="/life-cycle">Life Cycle</NuxtLink>
       <NuxtLink to="/component-test">Component Test</NuxtLink>
+      <NuxtLink to="/i18n">i18n</NuxtLink>
     </nav>
   </div>
 </template>
