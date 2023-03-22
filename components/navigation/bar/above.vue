@@ -7,6 +7,7 @@
       <NuxtLink to="/component-test">Component Test</NuxtLink>
       <NuxtLink to="/i18n">i18n</NuxtLink>
       <NuxtLink to="/google-charts">Google Charts</NuxtLink>
+      <NuxtLink to="/my-page">MyPage</NuxtLink>
     </nav>
   </div>
 </template>

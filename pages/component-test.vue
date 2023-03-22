@@ -17,10 +17,6 @@ import { deCrypto, getCrypto } from '~/utils/crypto';
 
 const cryptoText = ref('');
 
-definePageMeta({
-  middleware: ['authenticated'],
-});
-
 const attributes = ref([
   {
     highlight: true,
