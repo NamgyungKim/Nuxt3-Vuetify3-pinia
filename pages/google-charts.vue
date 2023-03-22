@@ -2,6 +2,7 @@
   <div>
     <v-card class="ma-4 pa-4">
       <h1>GoogleCharts</h1>
+      <a href="https://developers.google.com/chart?hl=ko">구글 차트</a>
       <div>
         <div id="chart_div"></div>
         <v-btn @click="add">add 도시락</v-btn>
@@ -16,10 +17,6 @@
 </template>
 
 <script setup>
-useHead({
-  script: [{ type: 'text/javascript', src: 'https://www.gstatic.com/charts/loader.js' }],
-});
-
 const orgData = ref([
   ['종류', '갯수'],
   ['도시락', 3],
@@ -58,12 +55,12 @@ const get_blodTransfusionStateChart = () => {
 
 const updateChart = () => {
   google.charts.setOnLoadCallback(drawChart);
+  google.charts.setOnLoadCallback(get_blodTransfusionStateChart);
 };
 
 onMounted(() => {
   google.charts.load('current', { packages: ['corechart'] });
   updateChart();
-  google.charts.setOnLoadCallback(get_blodTransfusionStateChart);
 });
 </script>
 

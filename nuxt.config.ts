@@ -15,6 +15,7 @@ export default defineNuxtConfig({
       // viewport: 'width=500, initial-scale=1',
       title: 'Nuxt3 프레임워크',
       meta: [{ name: 'Nuxt3, Pinia, TypeScript 로 구성된 프레임워크', content: '개발을 위한 기본 프레임워크' }],
+      script: [{ type: 'text/javascript', src: 'https://www.gstatic.com/charts/loader.js' }],
     },
   },
   // modules
