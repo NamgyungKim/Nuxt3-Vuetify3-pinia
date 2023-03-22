@@ -11,7 +11,9 @@ const cfg = {
 };
 const cryptoKey = CryptoJS.enc.Utf8.parse(key);
 
-const getCrypto = (data) => CryptoJS.AES.encrypt(data, cryptoKey, cfg).toString();
-const deCrypto = (data) => CryptoJS.AES.decrypt(data, cryptoKey, cfg).toString(CryptoJS.enc.Utf8);
+const cripto = {
+  getCrypto: (data) => CryptoJS.AES.encrypt(data, cryptoKey, cfg).toString(),
+  deCrypto: (data) => CryptoJS.AES.decrypt(data, cryptoKey, cfg).toString(CryptoJS.enc.Utf8),
+};
 
-export { getCrypto, deCrypto };
+export default cripto;
