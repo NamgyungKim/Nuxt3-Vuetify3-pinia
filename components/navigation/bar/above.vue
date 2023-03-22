@@ -6,6 +6,7 @@
       <NuxtLink to="/life-cycle">Life Cycle</NuxtLink>
       <NuxtLink to="/component-test">Component Test</NuxtLink>
       <NuxtLink to="/i18n">i18n</NuxtLink>
+      <NuxtLink to="/google-charts">Google Charts</NuxtLink>
     </nav>
   </div>
 </template>
