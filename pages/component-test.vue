@@ -24,6 +24,7 @@
 
 <script setup>
 import { Calendar } from 'v-calendar';
+import CryptoJS from 'crypto-js';
 
 const cryptoText = ref('');
 const attributes = ref([
@@ -40,10 +41,11 @@ const attributes = ref([
 ]);
 
 const fn_getCrypto = () => {
-  console.log(crypto.getCrypto(cryptoText.value));
+  console.log(crypto(CryptoJS).getCrypto(cryptoText.value));
+  // console.log(Crypto.getCrypto(cryptoText.value));
 };
 const fn_deCrypto = () => {
-  console.log(crypto.deCrypto(cryptoText.value));
+  console.log(crypto(CryptoJS).deCrypto(cryptoText.value));
 };
 </script>
 
